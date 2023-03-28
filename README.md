@@ -1,2 +1,2 @@
-# Performance_Management_System
+# KNU 실시간 주차 관리 서비스
 2023-01 종합설계프로젝트 2
