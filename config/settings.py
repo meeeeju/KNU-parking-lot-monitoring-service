@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+from config import my_settings
 import pymysql
 pymysql.install_as_MySQLdb()
 
@@ -89,17 +90,8 @@ WSGI_APPLICATION = 'config.wsgi.application'
 #         'NAME': BASE_DIR / 'db.sqlite3',
 #     }
 # }
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'knu_pklot',
-        'USER': 'root',
-        'PASSWORD': '7544',
-        'HOST': 'localhost',
-        'PORT': '3306',
-    }
-}
 
+DATABASES = my_settings.DATABASES
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
