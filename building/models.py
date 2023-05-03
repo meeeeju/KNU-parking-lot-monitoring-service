@@ -8,6 +8,8 @@ class Building(models.Model):
     pk_size = models.IntegerField(verbose_name='건물의 총 주차 공간 개수')
     pk_count = models.IntegerField(verbose_name='건물의 주차 가능한 공간의 개수')
     modifiedAt = models.DateTimeField(auto_now=True, verbose_name='최근 수정 시간')
+    sector = models.IntegerField(verbose_name='빌딩이 속한 섹터')
+    sub_sector = models.CharField(max_length=2, verbose_name='빌딩이 속한 서브 섹터')
 
     class Meta:
         db_table = 'building'
